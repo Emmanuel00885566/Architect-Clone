@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  height: 100%;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+}
+.navbar a{
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: normal;
+}
+.logo{
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.nav-links a { 
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+
+
+
+
+.main {
+  margin-left: 0px;
+  padding: 0px;
+  flex: 1;
+}
+
+.hero {
+  background-image: url("images/architect.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  
+  color: white;
+  padding: 16px 24px;
+  font-size: 48px;
+}
+.logo-box{
+    background-color: rgba(0,0,0,0.6);
+    padding: 4px 8px;
+    margin-right: 8px;
+}
+.hero h1 span {
+  font-weight: bold;
+}
+
+h2 {
+  margin: 40px 0 20px;
+  font-size: 28px;
+}
+
+.projects {
+    padding: 32px 24px;
+}
+.projects h2{
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.project-card {
+  position: relative;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.label{
+    position: absolute;
+    top: 8px;
+}
+.project-card span {
+  position: absolute;
+  top: 0px;
+  background: black;
+  color: white;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.team-member img {
+  width: 100%;
+  height: auto;
+}
+
+.team-member h3 {
+  margin-top: 10px;
+}
+
+.team-member button {
+  margin-top: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1330px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 150px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+}

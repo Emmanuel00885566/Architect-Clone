@@ -108,6 +108,7 @@ h2 {
 .project-card img {
   width: 100%;
   display: block;
+  height: auto;
 }
 .label{
     position: absolute;

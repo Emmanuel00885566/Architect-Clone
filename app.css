@@ -14,40 +14,60 @@ body, html {
   overflow-x: hidden;
 }
 
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 24px;
-    border-bottom: 1px solid #ccc;
-    position: fixed;
-    top: 0;
-    background-color: white;
-    z-index: 1000;
-    width: 100%;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* similar to w3-card */
 }
 
-.navbar a{
-    text-decoration: none;
-    color: black;
-    margin-left: 20px;
-    font-size: 16px;
-    font-weight: normal;
+.logo {
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
 }
 
-.logo{
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
+.logo-bold {
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: black;
 }
 
-.nav-links a { 
-    margin-left: 20px;
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
+.logo-light {
+  font-weight: 350;
+  color: black;
 }
+
+.logo:hover {
+  background-color: #ddd; 
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 2px;
+}
+
+.nav-button:hover {
+  background-color: #ddd; 
+}
+
 
 .main {
   margin-left: 0px;
@@ -292,6 +312,7 @@ p{
       width: 100%;
       height: auto;
       display: block;
+      padding: 20px;
     }
 
     /* Footer styling */
@@ -299,7 +320,21 @@ p{
       background-color: #000;
       color: #fff;
       text-align: center;
-      padding: 16px 0;
+      padding: 20px 0;
+    }
+
+      footer a {
+      color: #fff;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #4CAF50; 
+    }
+
+    p{
+      text-align: center;
     }
     
 

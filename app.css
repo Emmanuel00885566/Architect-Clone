@@ -6,12 +6,12 @@
 
 body, html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
   height: 100%;
   padding: 0;
   width: 100%;
   margin: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .navbar{
@@ -25,6 +25,7 @@ body, html {
     z-index: 1000;
     width: 100%;
 }
+
 .navbar a{
     text-decoration: none;
     color: black;
@@ -32,6 +33,7 @@ body, html {
     font-size: 16px;
     font-weight: normal;
 }
+
 .logo{
     font-weight: bold;
     letter-spacing: 4px;
@@ -46,10 +48,6 @@ body, html {
     color: black;
     font-size: 14px;
 }
-
-
-
-
 
 .main {
   margin-left: 0px;
@@ -66,43 +64,51 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .hero h1 {
-  
   color: white;
   padding: 16px 24px;
   font-size: 48px;
 }
+
 .logo-box{
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0,0,0,0.7);
     padding: 4px 8px;
     margin-right: 8px;
 }
+
 .hero h1 span {
   font-weight: bold;
 }
 
-h2 {
-  margin: 40px 0 20px;
-  font-size: 28px;
+.projects {
+    padding: 32px 0;
 }
 
-.projects {
-    padding: 32px 24px;
-}
 .projects h2{
     margin-bottom: 16px;
     font-size: 24px;
 }
 .project-grid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+  padding: 10px;
+  justify-content: flex-start;
 }
-
+.project-grid img{
+  width: 100%;
+  display: block;
+}
 .project-card {
   position: relative;
+  width: 100%;
+  max-width: 300px;
+  flex: 1 1 calc(33.333% -32px);
+  box-sizing: border-box;
 }
 
 .project-card img {
@@ -110,6 +116,7 @@ h2 {
   display: block;
   height: auto;
 }
+
 .label{
     position: absolute;
     top: 8px;
@@ -123,27 +130,56 @@ h2 {
   font-size: 14px;
 }
 
+
+p{
+  text-align: justify;
+}
+
+
 .team {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+ box-sizing: border-box;
+  padding: 48px 16px;
+}
+
+.team-member {
+  flex: 0 0 23%;
+  max-width: 23%;
+  box-sizing: border-box;
+  padding: 0 8px;
+  margin-top: 32px;
+  text-align: center;
+  margin-bottom: 32px;
 }
 
 .team-member img {
   width: 100%;
   height: auto;
+  display: block;
+  border-radius: 0;
+  filter: grayscale(75%);
 }
 
 .team-member h3 {
-  margin-top: 10px;
+  margin-top: 16px 0 8px;
+  font-size: 18px;
 }
 
+.team-member p{
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
 .team-member button {
   margin-top: 10px;
-  background-color: #000;
-  color: white;
+  background-color: #e0e0e0;
+  color: rgb(7, 5, 5);
   border: none;
   padding: 10px;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -169,6 +205,14 @@ form button {
   cursor: pointer;
 }
 
+.map-section {
+  margin-top: 48px;
+}
+.map-image {
+  width: 100;
+  filter: grayscale(2%);
+}
+
 footer {
   margin-top: 40px;
   padding: 20px 0;
@@ -186,6 +230,15 @@ footer {
     justify-content: space-around;
   }
 
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+   flex: 1 1 100%;
+    max-width: 100%;
+  }
   .main {
     margin-left: 0;
   }
